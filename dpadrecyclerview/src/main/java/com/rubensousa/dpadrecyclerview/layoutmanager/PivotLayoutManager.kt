@@ -52,7 +52,7 @@ import com.rubensousa.dpadrecyclerview.layoutmanager.scroll.LayoutScroller
  *
  * It behaves similarly to `GridLayoutManager` with the main difference being how focus is handled.
  */
-class PivotLayoutManager(properties: Properties) : RecyclerView.LayoutManager(),
+open class PivotLayoutManager(properties: Properties) : RecyclerView.LayoutManager(),
     ItemTouchHelper.ViewDropHandler, RecyclerView.SmoothScroller.ScrollVectorProvider {
 
     private var layoutDirection: Int = View.LAYOUT_DIRECTION_LTR
