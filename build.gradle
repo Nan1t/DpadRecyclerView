@@ -19,6 +19,6 @@ plugins {
 }
 
 apiValidation {
-    ignoredProjects += ["sample", "dpadrecyclerview-test-fixtures"]
+    ignoredProjects += ["sample"]
     ignoredClasses += "com.rubensousa.dpadrecyclerview.BuildConfig"
 }

@@ -57,13 +57,10 @@ dependencies {
     testImplementation libs.junit
     testImplementation libs.truth
     testImplementation libs.mockk
-    testImplementation project (':dpadrecyclerview-test-fixtures')
 
     androidTestImplementation libs.androidx.fragment.testing
     androidTestImplementation libs.carioca.report
     androidTestImplementation libs.carioca.rules
-    androidTestImplementation project (':dpadrecyclerview-testing')
-    androidTestImplementation project (':dpadrecyclerview-test-fixtures')
     androidTestUtil libs.androidx.test.services
 }
 

@@ -57,8 +57,6 @@ dependencies {
     androidTestImplementation libs.carioca.report
     androidTestImplementation libs.androidx.compose.ui.tooling
     androidTestImplementation libs.androidx.compose.material3
-    androidTestImplementation project(':dpadrecyclerview-testing')
-    androidTestImplementation project(':dpadrecyclerview-test-fixtures')
     androidTestImplementation libs.androidx.test.compose.ui.junit4
     androidTestUtil libs.androidx.test.services
 }
