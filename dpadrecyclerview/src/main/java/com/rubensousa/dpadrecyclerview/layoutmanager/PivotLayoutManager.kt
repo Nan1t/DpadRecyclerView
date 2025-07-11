@@ -283,6 +283,13 @@ open class PivotLayoutManager(properties: Properties) : RecyclerView.LayoutManag
         scroller.scrollToPosition(position)
     }
 
+    fun smoothScrollToPosition(
+        position: Int,
+        requestFocus: Boolean
+    ) {
+        scroller.scrollToPosition(position, subPosition = 0, smooth = true, requestFocus = requestFocus)
+    }
+
     override fun smoothScrollToPosition(
         recyclerView: RecyclerView,
         state: RecyclerView.State,

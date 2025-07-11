@@ -75,7 +75,8 @@ internal class LayoutScroller(
     fun scrollToPosition(
         position: Int,
         subPosition: Int,
-        smooth: Boolean
+        smooth: Boolean,
+        requestFocus: Boolean? = null
     ) {
         val view = layoutManager.findViewByPosition(position)
 
@@ -84,7 +85,7 @@ internal class LayoutScroller(
             && view != null
             && isScrollToViewPossible(position, view)
         ) {
-            startScroll(position, subPosition, view, smooth)
+            startScroll(position, subPosition, view, smooth, requestFocus)
             return
         }
 
@@ -108,7 +109,7 @@ internal class LayoutScroller(
         }
 
         if (view != null && isScrollToViewPossible(position, view)) {
-            startScroll(position, subPosition, view, smooth)
+            startScroll(position, subPosition, view, smooth, requestFocus)
             return
         }
 
@@ -167,7 +168,8 @@ internal class LayoutScroller(
         position: Int,
         subPosition: Int,
         view: View,
-        smooth: Boolean
+        smooth: Boolean,
+        requestFocus: Boolean? = null
     ) {
         isSelectionInProgress = true
         val subPositionView = layoutAlignment.getViewAtSubPosition(view, subPosition)
@@ -182,7 +184,7 @@ internal class LayoutScroller(
             view,
             subPositionView,
             smooth,
-            requestFocus = layoutManager.hasFocus()
+            requestFocus = requestFocus ?: layoutManager.hasFocus()
         )
         isSelectionInProgress = false
     }
